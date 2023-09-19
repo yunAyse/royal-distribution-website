@@ -1,0 +1,165 @@
+:root {
+  --main-color: #4169E1;
+  --black-color: #0e0e0e;
+  --border: 0.1rem solid rgba(255,255,255,0.4);
+}
+
+* {
+  font-family:  Poppins;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2 ease;
+}
+
+/* Base html codes */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+  width: 1rem;
+  background-color: white;
+}
+
+html::-webkit-scrollbar-track{
+   background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+  border-radius: 3rem;
+  background-color: var(--black-color);
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+section{
+  padding: 3.5rem 7%;
+}
+
+.btn{
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 30rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: var(--black-color);
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.heading {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin-bottom: 3.5rem;
+  margin-top: 2.5rem;
+  border-bottom: 0.1rem solid white;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: var(--black-color);
+}
+
+/*responsive start*/
+@media (max-width: 991px) {
+  
+  html{
+    font-size: 55%;
+  }
+
+  .header{
+    padding: 1.5rem 2rem;
+  }
+
+  .header .logo img {
+    height: 4rem;
+  }
+
+  section{
+    padding: 2rem;
+  }
+
+  
+
+  .products .box-container .box .box-head {
+    font-size: 3.4rem;
+  }
+}
+
+@media (max-width: 768px){
+
+  .header #menu-btn {
+    display: inline-block;
+  }
+  .header .navbar {
+    position: absolute;
+    top: 95%;
+    background-color: white;
+    height: calc(100vh - 9rem);
+    width: 30rem;  
+    box-shadow: 0px 20px 14px 0px rgba(0 0 0 / 75%);
+    right: -100%;
+  }
+
+  .header .navbar.active {
+    right: 3rem;
+  }
+
+  .header .navbar a{
+    color: var(--black-color);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .home .content {
+    width: auto;
+    margin: auto;
+    text-align: center;
+  }
+
+  .home .content .logo-content img {
+    margin-left: -2.5rem;
+  }
+
+  .contact .row {
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+  }
+
+  .contact .map {
+    flex: 1 1 40rem;
+    width: 50%;
+    object-fit: cover;
+  }
+
+  .contact .row form{
+    flex: 1 1 40rem;
+  }
+}
+
+@media (max-width: 576px){
+  html {
+    font-size: 50%;
+  }
+
+}
+
+/*responsive end*/
+
